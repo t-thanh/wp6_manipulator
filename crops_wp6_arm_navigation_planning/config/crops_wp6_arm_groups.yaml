@@ -1,0 +1,5 @@
+## the list of groups for which motion planning can be performed on the arm
+groups: 
+  - arm 
+  - arm_cartesian
+

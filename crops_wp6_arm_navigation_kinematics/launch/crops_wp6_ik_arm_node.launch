@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="arm_kinematics" type="arm_kinematics" name="crops_wp6_arm_kinematics" output="screen">    
+   <param name="tip_name" value="body9" />     
+   <param name="root_name" value="base_link" />  
+  </node>
+</launch>

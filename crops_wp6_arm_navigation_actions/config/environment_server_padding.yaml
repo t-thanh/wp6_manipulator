@@ -1,0 +1,6 @@
+default_robot_padding: 0.01
+link_padding:
+  - link: arm
+    padding: .01
+  - link: attached
+    padding: .01

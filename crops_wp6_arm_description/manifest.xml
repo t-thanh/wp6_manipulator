@@ -1,0 +1,15 @@
+<package>
+  <description brief="URDF description of the Crops arm">
+
+     This package contains an URDF description of the Crops arm and all supporting mesh files.
+
+  </description>
+  <author>Tien Thanh Nguye</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/crops_wp6_arm_description</url>
+  <depend package="urdf"/>
+
+</package>
+
+

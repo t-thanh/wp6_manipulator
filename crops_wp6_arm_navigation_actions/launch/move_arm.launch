@@ -1,0 +1,10 @@
+<?xml version="1.2"?>
+<launch>
+  <node pkg="move_arm" type="move_arm_simple_action" output="screen" name="move_arm"> 
+    <!--TODO-->	   
+    <remap from="arm_ik" to="crops_wp6_arm_kinematics/get_constraint_aware_ik" />	
+    <param name="group" type="string" value="arm" />
+    <param name="controller_action_name" type="string" value="/crops_arm_controller/follow_joint_trajectory" />
+  </node>
+</launch>
+

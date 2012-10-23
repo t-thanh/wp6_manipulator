@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find pr2_arm_navigation_config)/launch/pr2_planning_environment.launch" />
+  <include file="$(find pr2_arm_navigation_perception)/launch/laser-perception.launch" />
+  <include file="$(find planning_environment)/launch/environment_server.launch"/>
+  <include file="$(find pr2_arm_navigation_tutorials)/launch/rviz_collision_tutorial_2.launch" />
+</launch>

@@ -1,0 +1,11 @@
+<launch>
+
+  <!-- start gazebo with an simple world -->
+  <param name="/use_sim_time" value="true" />
+
+  <node name="gazebo" pkg="gazebo" type="gazebo" args="$(find pr2_arm_navigation_tutorials)/worlds/floorobj.world" respawn="false"/>
+
+  <!-- start pr2 robot -->
+  <include file="$(find pr2_gazebo)/pr2.launch"/>
+
+</launch>

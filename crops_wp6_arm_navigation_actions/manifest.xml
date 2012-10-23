@@ -1,0 +1,26 @@
+<package>
+  <description brief="crops_wp6_arm_navigation_actions">
+
+     crops_wp6_arm_navigation_actions
+
+  </description>
+  <author>Sachin Chitta</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/crops_wp6_arm_navigation_actions</url>
+  <depend package="crops_wp6_arm_navigation_config"/>
+  <depend package="planning_environment"/>
+  <depend package="trajectory_filter_server"/>
+  <depend package="move_arm"/>
+  <depend package="move_arm_warehouse"/>
+  <depend package="joint_trajectory_action" />
+  <depend package="crops_wp6_arm_msgs" />
+  <depend package="arm_navigation_msgs" />
+  <depend package="dynamic_reconfigure" />
+  
+  <platform os="ubuntu" version="9.04"/>
+  <platform os="ubuntu" version="9.10"/>
+  <platform os="ubuntu" version="10.04"/>
+</package>
+
+

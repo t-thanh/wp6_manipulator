@@ -1,0 +1,24 @@
+<package>
+  <description brief="crops_wp6_arm_navigation_tutorials">
+    This package contains code for tutorials that work with the arm navigation stack.
+  </description>
+  <author>Sachin Chitta</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/pr2_arm_navigation_tutorials</url>
+  <depend package="arm_navigation_msgs"/>
+  <depend package="kinematics_msgs"/>
+  <depend package="planning_environment"/>
+  <depend package="collision_space"/>
+  <depend package="planning_models"/>
+  <depend package="planning_environment"/>
+  <depend package="actionlib_msgs"/>
+
+  <depend package="arm_kinematics_constraint_aware"/>
+
+  <depend package="mapping_rviz_plugin"/>
+  <depend package="control_msgs"/>
+
+</package>
+
+

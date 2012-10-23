@@ -1,0 +1,17 @@
+<?xml version="1.2"?>
+<launch>
+  <!-- send additional description parameters -->
+  <include file="$(find crops_wp6_arm_navigation_config)/launch/crops_wp6_planning_environment.launch" />
+
+  <node pkg="ompl_ros_interface" type="ompl_ros" name="ompl_planning" output="screen">    
+    <!-- if we are moving the base, it is best to maintain the map in a fixed frame since identified objects that are being published
+	 are not necessarily updated -->
+    <!--    <param name="planner_frame_id" type="string" value="odom_combined" /> -->
+
+    <!-- planner configs -->
+    <param name="default_planner_config" type="string" value="SBLkConfig1"/>
+    <rosparam command="load" file="$(find crops_wp6_arm_navigation_planning)/config/crops_wp6_arm_groups.yaml" />
+    <rosparam command="load" file="$(find crops_wp6_arm_navigation_planning)/config/ompl_planning.yaml" />
+  </node>
+
+</launch>

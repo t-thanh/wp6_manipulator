@@ -1,0 +1,16 @@
+<package>
+  <description brief="crops_wp6_arm_msgs contains messages specific to the Crops arm">
+
+     This package contains messages specific to the Crops arm.
+
+  </description>
+  <author>Tien Thanh Nguyen</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/crops_arm_msgs</url>
+  <depend package="sensor_msgs"/>
+  <depend package="actionlib_msgs" />
+
+</package>
+
+

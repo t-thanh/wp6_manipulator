@@ -1,0 +1,13 @@
+<?xml version="1.2"?>
+<launch>
+  <arg name="log_to_warehouse" default="true"/>
+
+  <node pkg="move_arm_warehouse" type="move_arm_simple_action" output="screen" name="move_arm">  
+    <!--TODO-->	    
+    <param name="group" type="string" value="arm" />
+    <remap from="arm_ik" to="crops_wp6_arm_kinematics/get_constraint_aware_ik" />	
+    <param name="controller_action_name" type="string" value="/crops_arm_controller/follow_joint_trajectory" />
+    <param name="log_to_warehouse" value="$(arg log_to_warehouse)"/>
+  </node>
+</launch>
+

@@ -1,0 +1,193 @@
+<robot name= "crops_arm">
+<link name = "base_link"> 
+	<visual>
+		<geometry>
+			<mesh filename="package://crops_wp6_arm_description/mesh/crops_arm/body0.stl" scale="1.000000e-3 1.000000e-3 1.000000e-3"/>
+		</geometry>
+		<material name="gray">
+			<color rgba="0.13 0.23 0.53 1"/>
+		</material>
+	</visual>
+</link>
+
+<link name="body1">
+	<visual>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
+			<mesh filename="package://crops_wp6_arm_description/mesh/crops_arm/body1.stl" scale="1.000000e-03 1.000000e-03 1.000000e-03"/>
+		</geometry>
+		<material name="gray_1">
+			<color rgba="0.24 0.24 0.24 1"/>
+		</material>
+	</visual>
+</link>
+
+<joint name="joint1" type="prismatic">
+	<limit effort="1000" velocity="1000" lower="-0.450000" upper="0.4500000"/>
+	<parent link="base_link"/>
+	<child link="body1"/>
+	<origin xyz="0.000000 0.000000 0.750000" rpy="0.000000 0.000000 0.000000"/>
+	<axis xyz="0 0 1"/>
+</joint>
+
+<link name="body2">
+	<visual>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
+			<mesh filename="package://crops_wp6_arm_description/mesh/crops_arm/body2.stl" scale="1.000000e-03 1.000000e-03 1.000000e-03"/>
+		</geometry>
+		<material name="gray_2">
+			<color rgba="0.6 0.30 0.30 1"/>
+		</material>
+	</visual>
+</link>
+
+<joint name="joint2" type="revolute">
+	<limit effort="1000" velocity="1000" lower="-1.570796" upper="1.570796"/>
+	<parent link="body1"/>
+	<child link="body2"/>
+	<origin xyz="0.000000 0.100000 -0.100000" rpy="0.000000 0.000000 1.570796"/>
+	<axis xyz="0 0 1"/>
+</joint>
+
+<link name="body3">
+	<visual>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
+			<mesh filename="package://crops_wp6_arm_description/mesh/crops_arm/body3.stl" scale="1.000000e-03 1.000000e-03 1.000000e-03"/>
+		</geometry>
+		<material name="gray_3">
+			<color rgba="0.36 0.6 0.36 1"/>
+		</material>
+	</visual>
+</link>
+
+<joint name="joint3" type="revolute">
+	<limit effort="1000" velocity="1000" lower="-2.094395" upper="0.349066"/>
+	<parent link="body2"/>
+	<child link="body3"/>
+	<origin xyz="0.000000 0.000000 0.000000" rpy="1.570796 0.000000 0.000000"/>
+	<axis xyz="0 0 1"/>
+</joint>
+
+<link name="body4">
+	<visual>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
+			<mesh filename="package://crops_wp6_arm_description/mesh/crops_arm/body4.stl" scale="1.000000e-03 1.000000e-03 1.000000e-03"/>
+		</geometry>
+		<material name="gray_4">
+			<color rgba="0.42 0.42 0.8 1"/>
+		</material>
+	</visual>
+</link>
+
+<joint name="joint4" type="revolute">
+	<limit effort="1000" velocity="1000" lower="-0.349066" upper="2.530727"/>
+	<parent link="body3"/>
+	<child link="body4"/>
+	<origin xyz="0.230000 0.150000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+	<axis xyz="0 0 1"/>
+</joint>
+
+<link name="body5">
+	<visual>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
+			<mesh filename="package://crops_wp6_arm_description/mesh/crops_arm/body5.stl" scale="1.000000e-03 1.000000e-03 1.000000e-03"/>
+		</geometry>
+		<material name="gray_5">
+			<color rgba="0.48 0.8 0.48 1"/>
+		</material>
+	</visual>
+</link>
+
+<joint name="joint5" type="revolute">
+	<limit effort="1000" velocity="1000" lower="-2.094395" upper="2.094395"/>
+	<parent link="body4"/>
+	<child link="body5"/>
+	<origin xyz="0.400000 0.200000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+	<axis xyz="0 0 1"/>
+</joint>
+
+<link name="body6">
+	<visual>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
+			<mesh filename="package://crops_wp6_arm_description/mesh/crops_arm/body6.stl" scale="1.000000e-03 1.000000e-03 1.000000e-03"/>
+		</geometry>
+		<material name="gray_6">
+			<color rgba="0.1 0.54 0.54 1"/>
+		</material>
+	</visual>
+</link>
+
+<joint name="joint6" type="revolute">
+	<limit effort="1000" velocity="1000" lower="-2.094395" upper="2.094395"/>
+	<parent link="body5"/>
+	<child link="body6"/>
+	<origin xyz="0.100000 0.000000 0.000000" rpy="-1.570796 0.000000 0.000000"/>
+	<axis xyz="0 0 1"/>
+</joint>
+
+<link name="body7">
+	<visual>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
+			<mesh filename="package://crops_wp6_arm_description/mesh/crops_arm/body7.stl" scale="1.000000e-03 1.000000e-03 1.000000e-03"/>
+		</geometry>
+		<material name="gray_7">
+			<color rgba="0.60 0.01 0.60 1"/>
+		</material>
+	</visual>
+</link>
+
+<joint name="joint7" type="revolute">
+	<limit effort="1000" velocity="1000" lower="-2.007129" upper="2.007129"/>
+	<parent link="body6"/>
+	<child link="body7"/>
+	<origin xyz="0.200000 0.000000 0.000000" rpy="0.000000 0.000000 0.000000"/>
+	<axis xyz="0 0 1"/>
+</joint>
+
+<link name="body8">
+	<visual>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
+			<mesh filename="package://crops_wp6_arm_description/mesh/crops_arm/body8.stl" scale="1.000000e-03 1.000000e-03 1.000000e-03"/>
+		</geometry>
+		<material name="gray_8">
+			<color rgba="0.66 0.66 0.02 1"/>
+		</material>
+	</visual>
+</link>
+
+<joint name="joint8" type="revolute">
+	<limit effort="1000" velocity="1000" lower="-1.570796" upper="1.570796"/>
+	<parent link="body7"/>
+	<child link="body8"/>
+	<origin xyz="0.045000 0.000000 0.000000" rpy="1.570796 0.000000 0.000000"/>
+	<axis xyz="0 0 1"/>
+</joint>
+
+<link name="body9">
+	<visual>
+		<origin xyz="0 0 0" rpy="0 0 0"/>
+		<geometry>
+			<mesh filename="package://crops_wp6_arm_description/mesh/crops_arm/body9.stl" scale="1.000000e-03 1.000000e-03 1.000000e-03"/>
+		</geometry>
+		<material name="gray_9">
+			<color rgba="0.2 0.1 0.72 1"/>
+		</material>
+	</visual>
+</link>
+
+<joint name="joint9" type="revolute">
+	<limit effort="1000" velocity="1000" lower="-3.141593" upper="3.141593"/>
+	<parent link="body8"/>
+	<child link="body9"/>
+	<origin xyz="0.050000 0.000000 0.000000" rpy="0.000000 1.570796 0.000000"/>
+	<axis xyz="0 0 1"/>
+</joint>
+
+</robot>

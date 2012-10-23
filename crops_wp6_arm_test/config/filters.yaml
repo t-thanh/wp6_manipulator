@@ -1,0 +1,8 @@
+service_type: FilterJointTrajectory
+filter_chain:
+  -
+    name: numerical_differentiation_spline_smoother
+    type: spline_smoother/NumericalDifferentiationSplineSmootherFilterJointTrajectory
+  - 
+    name: clamped_cubic_spline_smoother
+    type: spline_smoother/ClampedCubicSplineSmootherFilterJointTrajectory

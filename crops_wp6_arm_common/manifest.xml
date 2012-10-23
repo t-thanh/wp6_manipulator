@@ -1,0 +1,25 @@
+<package>
+  <description brief="crops_wp6_arm_common">
+
+     crops_arm_common
+
+  </description>
+  <author>root</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/crops_arm_common</url>
+  <depend package="std_msgs"/>
+  <depend package="roscpp"/>
+  <depend package="actionlib" />
+  <depend package="trajectory_msgs"/>
+  <depend package="actionlib_msgs" />
+  <depend package="control_msgs" />
+  <depend package="sensor_msgs" />
+  <depend package="simple_message" />
+  <depend package="urdf" />
+  <depend package="arm_navigation_msgs"/>
+  <depend package="pr2_controllers_msgs" />
+  <depend package="crops_wp6_arm_msgs" />
+</package>
+
+

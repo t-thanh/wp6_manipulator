@@ -1,0 +1,20 @@
+<package>
+  <description brief="crops_wp6_arm_navigation_kinematics">
+
+     crops_wp6_arm_navigation_kinematics
+
+  </description>
+  <author>Sachin Chitta</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/crops_wp6_arm_navigation_kinematics</url>  
+  <depend package="arm_kinematics_constraint_aware"/>
+  <depend package="arm_kinematics"/>
+  <depend package="crops_wp6_arm_navigation_config"/>
+
+  <platform os="ubuntu" version="9.04"/>
+  <platform os="ubuntu" version="9.10"/>
+  <platform os="ubuntu" version="10.04"/>
+</package>
+
+

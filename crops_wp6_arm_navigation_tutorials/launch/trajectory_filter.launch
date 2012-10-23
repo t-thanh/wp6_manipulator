@@ -1,0 +1,7 @@
+<launch> 
+  <node pkg="trajectory_filter_server" name="trajectory_filter" type="trajectory_filter_server" output="screen">
+	  <rosparam if="$(optenv USE_RIGHT_ARM true) command="load" file="$(find pr2_arm_navigation_config)/config/joint_limits_right.yaml"/>
+	  <rosparam if="$(optenv USE_LEFT_ARM true)  command="load" file="$(find pr2_arm_navigation_config)/config/joint_limits_left.yaml"/>
+    <rosparam command="load" file="$(find pr2_arm_navigation_tutorials)/config/filters.yaml"/>
+  </node>
+</launch>

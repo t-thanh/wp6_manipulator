@@ -1,0 +1,6 @@
+<?xml version="1.2"?>
+<launch>
+  <include file="$(find crops_wp6_arm_test)/launch/trajectory_filter.launch" />
+
+  <node pkg="crops_wp6_arm_test" name="pr2_joint_trajectory_client" type="pr2_joint_trajectory_client" />
+</launch>

@@ -1,0 +1,9 @@
+<stack>
+  <description brief="crops_wp6_manipulator">crops_wp6_manipulator</description>
+  <author>Tien Thanh Nguyen</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://crops-robot.eu</url>
+  <depend stack="arm_navigation" /> <!-- arm_navigation -->
+
+</stack>

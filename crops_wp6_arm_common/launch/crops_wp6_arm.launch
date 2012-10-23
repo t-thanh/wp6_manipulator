@@ -1,0 +1,13 @@
+<?xml version="1.2"?>
+<launch>
+  <!-- load crops arm urdf -->
+  <include file="$(find crops_wp6_arm_description)/launch/crops_wp6_arm_urdf.launch" />
+
+  <!-- which joints does this crops arm instance control? -->
+  <rosparam command="load" file="$(find crops_wp6_arm_common)/config/crops_wp6_arm_controllers.yaml" />
+
+  <!-- crops arm node -->
+  <node pkg="crops_wp6_arm_common" type="crops" name="crops" output="screen"/>
+</launch>
+
+ 

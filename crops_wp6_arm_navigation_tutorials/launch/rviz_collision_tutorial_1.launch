@@ -1,0 +1,5 @@
+<launch>
+
+  <node pkg="rviz" type="rviz" name="rviz_collision_tutorial_1" args="-d $(find pr2_arm_navigation_tutorials)/config/rviz_collision_tutorial_1.vcg" />
+     
+</launch>

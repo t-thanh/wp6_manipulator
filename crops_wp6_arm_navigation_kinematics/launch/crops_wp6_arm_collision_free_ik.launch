@@ -1,0 +1,11 @@
+<launch>
+   <include file="$(find crops_wp6_arm_navigation_config)/launch/crops_wp6_planning_environment.launch" />
+
+   <node pkg="arm_kinematics_constraint_aware" type="arm_kinematics_constraint_aware" name="crops_wp6_arm_kinematics" output="screen">    
+      <!-- IK parameters -->
+      <param name="tip_name" value="body9" />     
+      <param name="root_name" value="base_link" />  
+      <param name="group" type="string" value="arm" />
+      <param name="kinematics_solver" type="string" value="arm_kinematics_constraint_aware/KDLArmKinematicsPlugin" />
+   </node>
+</launch>

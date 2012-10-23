@@ -1,0 +1,119 @@
+# Definining multi-degree of freedom joints.  We require that a
+# multi-dof transform exist with a child frame that is the base
+# frame of the robot
+
+multi_dof_joints:
+  - name: world_joint
+    type: Floating
+    parent_frame_id: base_link
+    child_frame_id: base_link
+
+## the definition of each group
+groups:
+
+  - name: arm
+    base_link: base_link
+    tip_link: body9
+
+# The default padding to assign to agent links for the purposes
+# of environmental collision checking
+default_robot_padding: .02
+
+# The default padding to assign to collision objects and attached
+# collision objects for the purposes of filtering them from the
+# collision map
+default_object_padding: .03
+
+#This must contain all pairs of links that have intersecting meshes to
+#get an accurate collision checking result.  It can optionally contain
+#all pairs of meshes that cannot possibly be in contact with each
+#other in the robot's normal operation.  Including the most
+#comprehensive possible list will improve collision checking speed
+default_collision_operations:
+  - object1: base_link
+    object2: body1
+    operation: disable  # Adjacent in collision
+  - object1: body1
+    object2: body2
+    operation: disable  # Adjacent in collision
+  - object1: body2
+    object2: body3
+    operation: disable  # Adjacent in collision
+  - object1: body3
+    object2: body4
+    operation: disable  # Adjacent in collision
+  - object1: body4
+    object2: body5
+    operation: disable  # Adjacent in collision
+  - object1: body5
+    object2: body6
+    operation: disable  # Adjacent in collision
+  - object1: body6
+    object2: body7
+    operation: disable  # Adjacent in collision
+  - object1: body7
+    object2: body8
+    operation: disable  # Adjacent in collision
+  - object1: body8
+    object2: body9
+    operation: disable  # Adjacent in collision
+  - object1: base_link
+    object2: body2
+    operation: disable  # Never in collision
+  - object1: body2
+    object2: body4
+    operation: disable  # Never in collision
+  - object1: body2
+    object2: body5
+    operation: disable  # Never in collision
+  - object1: body2
+    object2: body6
+    operation: disable  # Never in collision
+  - object1: body2
+    object2: body7
+    operation: disable  # Never in collision
+  - object1: body2
+    object2: body8
+    operation: disable  # Never in collision
+  - object1: body2
+    object2: body9
+    operation: disable  # Never in collision
+  - object1: body3
+    object2: body5
+    operation: disable  # Never in collision
+  - object1: body3
+    object2: body6
+    operation: disable  # Never in collision
+  - object1: body3
+    object2: body7
+    operation: disable  # Never in collision
+  - object1: body3
+    object2: body8
+    operation: disable  # Never in collision
+  - object1: body3
+    object2: body9
+    operation: disable  # Never in collision
+  - object1: body4
+    object2: body7
+    operation: disable  # Never in collision
+  - object1: body4
+    object2: body8
+    operation: disable  # Never in collision
+  - object1: body4
+    object2: body9
+    operation: disable  # Never in collision
+  - object1: body5
+    object2: body7
+    operation: disable  # Never in collision
+  - object1: body5
+    object2: body8
+    operation: disable  # Never in collision
+  - object1: body5
+    object2: body9
+    operation: disable  # Never in collision
+  - object1: body6
+    object2: body9
+    operation: disable  # Never in collision
+  - object1: body7
+    object2: body9
+    operation: disable  # Never in collision
